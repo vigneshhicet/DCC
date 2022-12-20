@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+void main()
+
+{
+
+FILE *fptr;
+
+char name[20];
+
+int age;
+
+float salary;
+
+fptr = fopen("emt.txt","w");
+
+if(fptr == NULL)
+
+{
+
+printf("File does not exists \n");
+
+return;
+
+}
+
+printf("Enter the name\n");
+
+scanf("%s",name);
+
+fprintf(fptr, "%s\n",name);
+
+printf("Enter the age\n");
+
+scanf("%d",&age);
+
+fprintf(fptr, "%d\n",age);
+
+printf("Enter the salary\n");
+
+scanf("%f",&salary);
+
+fprintf(fptr,"%.2f\n",salary);
+
+fclose(fptr);
+
+}
